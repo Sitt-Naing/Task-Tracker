@@ -1,0 +1,37 @@
+tasklist = []
+finishedtask = []
+
+command = input("What would you like to do? [options include, add a task, finish a task, view tasks, delete a task, view compeleted] ")
+
+while command != "exit":
+    
+    
+    if command == "add a task":
+        task = input("What task would you like to add? ")
+        tasklist.append(task)
+        print(f"Task was succesfully added, here is the all the current tasks {tasklist}")
+    
+    elif command == "finish a task":
+        finishtask = input("which task did you finish? ")
+
+        try:
+            tasklist.remove(finishtask)
+            print(f"{finishtask} was removed, good job!")
+            finishedtask.append(finishtask)
+            
+        except ValueError:
+            print(f"Sorry {finishtask} wasn't on the tasklist")
+            continue
+    
+    elif command == "view tasks":
+        print(tasklist)
+    
+    elif command == "delete a task":
+        deletedtask = input("What task would you like to remove? ")
+        tasklist.remove(deletedtask)
+        print("Task successfully deleted!")
+    
+    elif command == "view completed":
+        print(finishedtask)
+
+    command = input("What would you like to do? [options include, add a task, finish a task, view tasks, delete a task, view compeleted] ")
