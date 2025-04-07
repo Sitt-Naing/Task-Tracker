@@ -1,7 +1,7 @@
 tasklist = []
 finishedtask = []
 
-command = input("What would you like to do? [options include, add a task, finish a task, view tasks, delete a task, view compeleted] ")
+command = input("What would you like to do? [options include, add a task, finish a task, view tasks, delete a task, view completed] ")
 
 while command != "exit":
     
